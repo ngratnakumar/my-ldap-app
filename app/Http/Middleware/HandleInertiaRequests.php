@@ -37,6 +37,7 @@ class HandleInertiaRequests extends Middleware
                     'name' => $request->user()->name,
                     'username' => $request->user()->username, // Ensure this matches your column
                     'domain' => $request->user()->domain,     // Add this line!
+                    'roles' => $request->user()->getRoleNames(),
                 ] : null,
             ],
         ];
